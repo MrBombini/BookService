@@ -24,7 +24,7 @@ class bookController extends Controller
         $request->validate([
             'titulo' => 'required|string|max:255',
             'autor' => 'required|string|max:255',
-            'anio_publicacion' => 'required|digits:4|integer|min:1500',
+            'anio_publicacion' => 'required|digits:4|integer|min:1000|max:' . date('Y'),
             'categoria' => 'required|string|max:100',
             'estado' => 'in:disponible,prestado'
         ]);

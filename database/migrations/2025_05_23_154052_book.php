@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('titulo');
             $table->string('autor');
-            $table->year('anio_publicacion');
+            $table->integer('anio_publicacion');
             $table->string('categoria');
             $table->enum('estado', ['disponible', 'prestado'])->default('disponible');
             $table->timestamps();
